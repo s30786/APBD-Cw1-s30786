@@ -3,7 +3,7 @@ using APBD_Cw1_s30786.Services;
 
 namespace APBD_Cw1_s30786;
 
-public class CatalogConsoleHandler(             //sporo kodu uciekło po alt+enter
+public class CatalogConsoleHandler(
     CatalogServices catalogServices,
     ReportServices reportServices,
     ConsoleInput input)
@@ -86,7 +86,7 @@ public class CatalogConsoleHandler(             //sporo kodu uciekło po alt+ent
     private Laptop CreateLaptop(string name)
     {
         int ramGb = input.ReadInt("Podaj ilość RAM (GB): ");
-        string processor = input.ReadRequiredString("Podaj procesor: ");        //required 👍
+        string processor = input.ReadRequiredString("Podaj procesor: ");
 
         return new Laptop(name, ramGb, processor);
     }
@@ -107,7 +107,3 @@ public class CatalogConsoleHandler(             //sporo kodu uciekło po alt+ent
         return new Camera(name, megapixels, hasOpticalZoom);
     }
 }
-
-
-//czemu wszędzie kompilator chce var xd 
-//rage against machione

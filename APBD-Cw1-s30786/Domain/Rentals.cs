@@ -6,7 +6,7 @@ public class Rental
     public Equipment Equipment { get; }
     public DateTime RentalDate { get; }
     public DateTime DueDate { get; }
-    private DateTime? ReturnDate { get; set; } //gubię się kiedy używać _ a kiedy nie, pole jest prywatne ale kompilator mówi że tak się nie pisze xd
+    private DateTime? ReturnDate { get; set; } 
     public decimal Penalty { get; private set; }
 
     public bool IsReturned => ReturnDate.HasValue;
@@ -15,9 +15,9 @@ public class Rental
 
     public Rental(User user, Equipment equipment, DateTime rentalDate, DateTime dueDate)
     {
-        ArgumentNullException.ThrowIfNull(user); //jak rekomendują to git
+        ArgumentNullException.ThrowIfNull(user);
 
-        ArgumentNullException.ThrowIfNull(equipment); //as above
+        ArgumentNullException.ThrowIfNull(equipment);
 
         if (dueDate.Date < rentalDate.Date)
             throw new ArgumentException("Termin zwrotu nie może być wcześniejszy niż data wypożyczenia.");

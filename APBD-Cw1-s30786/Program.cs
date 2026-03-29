@@ -1,8 +1,4 @@
-﻿//rekomenduje ignorowanie komentarzy
-//to swoisty dziennik
-
-
-using APBD_Cw1_s30786.Services;
+﻿using APBD_Cw1_s30786.Services;
 
 namespace APBD_Cw1_s30786;
 
@@ -10,7 +6,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        var catalogServices = new CatalogServices(); //kompilator rekomenduje var ale dziwnie mi z tym
+        var catalogServices = new CatalogServices();
         var rentalServices = new RentalServices(catalogServices);
         var reportServices = new ReportServices();
 
@@ -24,5 +20,4 @@ public class Program
     }
 }
 
-//zrobienie bazdy danych na cpp to jedna z moich lepszych decyzji na tej uczelni (wtedy planowałem dodać zapis do pliku)
 

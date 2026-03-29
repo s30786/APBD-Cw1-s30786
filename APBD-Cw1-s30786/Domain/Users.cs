@@ -11,8 +11,8 @@ public class User
     private static int _nextId = 1;
 
     public int Id { get; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
+    public string FirstName { get;}
+    public string LastName { get; }
     public UserType UserType { get; }
 
     public User(string firstName, string lastName, UserType userType)

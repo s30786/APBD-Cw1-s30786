@@ -34,7 +34,7 @@ public class RentalServices
                 throw new InvalidOperationException("Sprzęt jest już wypożyczony");
         }
 
-        int activeRentalsCount = GetActiveRentalsForUser(userId).Count;                 //wstyd przyznać ale wolę widzieć typ, jest to pośredni komplement dla javy a to mi się nie podoba
+        int activeRentalsCount = GetActiveRentalsForUser(userId).Count;
         int userLimit = GetUserRentalLimit(user);
 
         if (activeRentalsCount >= userLimit)

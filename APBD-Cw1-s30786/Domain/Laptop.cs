@@ -2,8 +2,8 @@
 
 public class Laptop : Equipment
 {
-    private int _RamGb { get; set; }
-    private string Processor { get; set; }
+    private int RamGb { get;}
+    private string Processor { get; }
 
     public Laptop(string name, int ramGb, string processor) : base(name)
     {
@@ -13,12 +13,12 @@ public class Laptop : Equipment
         if (string.IsNullOrWhiteSpace(processor))
             throw new ArgumentException("Procesor nie może być pusty.");
 
-        _RamGb = ramGb;
+        RamGb = ramGb;
         Processor = processor;
     }
 
     public override string ToString()
     {
-        return base.ToString() + $" | RAM: {_RamGb} GB | CPU: {Processor}";
+        return base.ToString() + $" | RAM: {RamGb} GB | CPU: {Processor}";
     }
 }

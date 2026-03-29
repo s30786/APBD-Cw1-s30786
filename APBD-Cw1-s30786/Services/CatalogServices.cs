@@ -12,11 +12,10 @@ public class CatalogServices
 
     public void AddUser(User user)
     {
-        ArgumentNullException.ThrowIfNull(user);                                            //ale fajne XD
+        ArgumentNullException.ThrowIfNull(user);
 
         if (_users.Any(u => u.Id == user.Id))
-            throw new InvalidOperationException($"Użytkownik o ID {user.Id} już istnieje"); //zgodnie z moją najlepszą wiedzą to się nigdy nie wydaży ale cóż szkodzi dodać zbędny kod (p.s. miałem w planach zapis do pliku ale pozostało to w planach)
-
+            throw new InvalidOperationException($"Użytkownik o ID {user.Id} już istnieje");
         _users.Add(user);
     }
 
@@ -56,17 +55,15 @@ public class CatalogServices
     {
         var user = _users.FirstOrDefault(u => u.Id == userId);
 
-        return user ?? throw new InvalidOperationException($"Nie znaleziono użytkownika o ID {userId}");    //ciekawe może i nie rozumiem i nie odtworzę ale jest krócej
+        return user ?? throw new InvalidOperationException($"Nie znaleziono użytkownika o ID {userId}");
         
-        // if (user is null)
-        //     throw new InvalidOperationException($"Nie znaleziono użytkownika o ID {userId}.");
     }
 
     public Equipment GetEquipmentById(int equipmentId)
     {
         var equipment = _equipment.FirstOrDefault(e => e.Id == equipmentId);
 
-        return equipment ?? throw new InvalidOperationException($"Nie znaleziono sprzętu o ID {equipmentId}"); // jak wyżej 
+        return equipment ?? throw new InvalidOperationException($"Nie znaleziono sprzętu o ID {equipmentId}");
     }
 
     public void MarkEquipmentAsUnavailable(int equipmentId)

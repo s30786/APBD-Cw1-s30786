@@ -1,6 +1,6 @@
 ﻿namespace APBD_Cw1_s30786;
 
-public class ConsoleUI(                         //oj już nie zmienie tej znazwy i tak zrobiłem za dużo ddziwnych twoich rekomendacji podsstępna maszyno
+public class ConsoleUI(
     CatalogConsoleHandler catalogHandler,
     RentalConsoleHandler rentalHandler)
 {
@@ -92,7 +92,7 @@ public class ConsoleUI(                         //oj już nie zmienie tej znazwy
         Console.WriteLine("10. Wygeneruj raport");
         Console.WriteLine("11. Uruchom scenariusz demonstracyjny");
         Console.WriteLine("12. Wyświetl użytkowników");
-        Console.WriteLine("ctrl + c. Wyjście"); //może i switch dalej jest na 0 ale no, hihi
+        Console.WriteLine("ctrl + c. Wyjście");
         Console.Write("Wybierz opcję: ");
     }
 }
