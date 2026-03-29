@@ -7,7 +7,7 @@ Sklonuj repozytorium i przejdź do katalogu projektu
 
     git clone https://github.com/s30786/APBD-Cw1-s30786.git
 
-    manualnie pobierając z adresu https://github.com/s30786/APBD-Cw1-s30786
+manualnie pobierając z adresu https://github.com/s30786/APBD-Cw1-s30786
 
 Otwórz projekt w preferowanym IDE
 
@@ -15,7 +15,7 @@ Upewnij się, że masz zainstalowany .NET (wersja zgodna z TargetFramework w .cs
 
 Uruchom aplikację
 
-    W konsoli wybieraj opcje z menu (1–12); scenariusz demonstracyjny uruchomisz z dedykowanej opcji menu.
+W konsoli wybieraj opcje z menu (1–12); scenariusz demonstracyjny uruchomisz z dedykowanej opcji menu.
 
 Scenariusz demonstracyjny
 Realizacja scenariusza demonstracyjnego odbywa się za pomocą komendy nr. 11 z menu konsolowego.
